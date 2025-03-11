@@ -6,7 +6,7 @@ import pickle
 model_path = 'src/your_model.pkl'
 
 # Load the model
-model_path = 'src/your_model.pkl'
+model_path = '/.src/your_model.pkl'
 model = pickle.load(open(model_path, 'rb'))
 
 # Streamlit UI
