@@ -3,15 +3,8 @@ import pickle
 import pandas as pd
 import os
 
-# Load your model
+# Correct file path based on your GitHub structure
 model_path = os.path.join(os.getcwd(), 'your_model.pkl')
-
-# correct file path
-model_path = os.path.join('src', 'your-model.pkl')
-model = pickle.load(open(model_path, 'rb'))
-
-#load model from the root directory
-model = pickle.load(open('your_model.pkl', 'rb'))
 
 # Check if the model file exists
 if os.path.exists(model_path):
@@ -21,6 +14,7 @@ else:
 
 # Streamlit UI
 st.title("Waiter Tips Prediction Model")
+st.write("This app predicts waiter tips based on total bill and group size.")
 
 # Input fields for user data
 total_bill = st.number_input("Enter Total Bill Amount ($)")
@@ -29,11 +23,7 @@ size = st.number_input("Enter Size of Dining Group")
 # Prediction button
 if st.button("Predict Tip"):
     if total_bill > 0 and size > 0:
-        # Predict tip
         prediction = model.predict([[total_bill, size]])
         st.success(f"Predicted Tip Amount: ${prediction[0]:.2f}")
     else:
-        st.warning("Please enter valid inputs.")
-
-# Home message
-st.sidebar.write("This app predicts waiter tips based on total bill and group size.")
+        st.warning("Please enter valid input values.")
