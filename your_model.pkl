@@ -1,5 +1,0 @@
-import pickle
-
-# Assuming your trained model is named 'model'
-with open('your_model.pkl', 'wb') as file:
-    pickle.dump(model, file)
