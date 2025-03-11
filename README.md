@@ -35,7 +35,7 @@ The best performing model was chosen based on accuracy and error metrics.
 
 1. Clone the Repository
 
-git clone https://github.com/YourUsername/waiter-tips-prediction.git
+git clone https://github.com/218T1A4256/waiter-tips-prediction.git
 cd waiter-tips-prediction
 
 2. Install Dependencies
