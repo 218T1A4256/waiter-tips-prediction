@@ -5,7 +5,8 @@ import pickle
 app = Flask(__name__)
 
 # Load your model
-model = pickle.load(open('your_model.pkl', 'rb'))
+import os
+model = pickle.load(open(os.path.join('src','your_model.pkl'), 'rb'))
 
 @app.route('/', methods=['GET'])
 def home():
