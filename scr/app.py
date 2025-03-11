@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 import pickle
 
+#correct the path to the model
+model_path = 'src/your_model.pkl'
+
 # Load the model
 model_path = 'src/your_model.pkl'
 model = pickle.load(open(model_path, 'rb'))
