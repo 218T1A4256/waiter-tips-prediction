@@ -6,6 +6,13 @@ import os
 # Load your model
 model_path = os.path.join(os.getcwd(), 'your_model.pkl')
 
+# correct file path
+model-path = os.path.join('src', 'your-model.pkl')
+model = pickle.load(open(model_path, 'rb'))
+
+#load model from the root directory
+model = pickle.load(open('your_model.pkl', 'rb'))
+
 # Check if the model file exists
 if os.path.exists(model_path):
     model = pickle.load(open(model_path, 'rb'))
