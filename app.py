@@ -7,7 +7,7 @@ import os
 model_path = os.path.join(os.getcwd(), 'your_model.pkl')
 
 # correct file path
-model-path = os.path.join('src', 'your-model.pkl')
+model_path = os.path.join('src', 'your-model.pkl')
 model = pickle.load(open(model_path, 'rb'))
 
 #load model from the root directory
